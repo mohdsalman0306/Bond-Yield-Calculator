@@ -3,7 +3,7 @@ import type { BondRequest, BondResponse } from "../types/bond.ts";
 export async function calculateBond(
     data: BondRequest
 ): Promise<BondResponse> {
-    const response = await fetch("http://localhost:3000/bond/calculate", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/bond/calculate`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
